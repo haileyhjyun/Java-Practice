@@ -1,26 +1,15 @@
-import java.util.Scanner;
 
 
 public class Main{
 
-	public static int max(int a, int b) {
-		return (a>b)? a:b;
-	}
+	
 	public static void main(String[]args) {
 		
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("배열의 크기: ");
-		int number = scanner.nextInt();
-		int [] array = new int[number];
+		Node one = new Node(10,20);
+		Node two = new Node(30,40);
 		
-		for(int i=0; i<number; i++) {
-			System.out.println("배열에 정수를 하나씩 입력하세요: ");
-			array[i] = scanner.nextInt();
+		Node result = one.getCenter(two);
+		
+		System.out.println("x: "+result.getX()+", y: "+result.getY());	
 		}
-		int result = -1;
-		for(int i=0; i<number; i++) {
-			result = max(result, array[i]);
-		}
-		System.out.println("최댓값은 "+ result);
-	}
 }
